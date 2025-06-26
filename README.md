@@ -5,7 +5,7 @@
 ![Platform](https://img.shields.io/badge/Platform-Multi--Agent--System-lightgrey)
 ![Status](https://img.shields.io/badge/Status-Development-orange)
 
-Welcome to **AI4AIR**, an intelligent AI agent-based system designed to collect, process, and visualize air quality data for specific regions. This project combines real-time environmental data with machine learning models to forecast future air quality and empower citizens and policymakers with actionable insights.
+Welcome to **AI4AIR**, an intelligent **AI agent**-based system designed to collect, process, and visualize air quality data for specific regions. This project combines real-time environmental data with machine learning models to forecast future air quality and empower citizens and policymakers with actionable insights.
 
 ## Project Overview
 
@@ -13,16 +13,16 @@ Welcome to **AI4AIR**, an intelligent AI agent-based system designed to collect,
 
 **AI4AIR** is composed of four autonomous agents working in harmony:
 
-| Agent        | Role                                                                 |
-|--------------|----------------------------------------------------------------------|
-| Main-Agent / NEXUS| Coordinates all other agents, manages task scheduling, and facilitates communication between agents. |
-| Homogen-Agent / HOMOGEN      | Ingests, cleans, aligns, and harmonizes air quality and weather data from various sources. |
-| Processing-Agent / AIRCAST    | Applies machine learning models to predict future air quality metrics (e.g., PM2.5, AQI). |
- Visualization-Agent / DASH    | Visualizes current and predicted data via interactive dashboards.     |
+| Agent                      | Role                                                                                                 |
+| -------------------------- | ---------------------------------------------------------------------------------------------------- |
+| Main-Agent / NEXUS         | Coordinates all other agents, manages task scheduling, and facilitates communication between agents. |
+| Homogen-Agent / HOMOGEN    | Ingests, cleans, aligns, and harmonizes air quality and weather data from various sources.           |
+| Processing-Agent / AIRCAST | Applies machine learning models to predict future air quality metrics (e.g., PM2.5, AQI).            |
+| Visualization-Agent / DASH | Visualizes current and predicted data via interactive dashboards.                                    |
 
 ## Key Objectives
 
-- Harmonize air quality data from heterogeneous sources 
+- Harmonize air quality data from heterogeneous sources
 - Predict future pollutant levels (PM2.5, NO₂, AQI) using machine learning
 - Provide accessible and interactive visual dashboards for public and institutional use
 - Support modular agent-based development for future scalability
@@ -40,19 +40,19 @@ Welcome to **AI4AIR**, an intelligent AI agent-based system designed to collect,
 ```
 AI4AIR/
 │
-├── NEXUS/       
+├── NEXUS/     
 │   └── orchestrator_agent.py
-├── HOMOGEN/           
+├── HOMOGEN/         
 │   └── homogen_agent.py
-├── AIRCAST/         
+├── AIRCAST/       
 │   └── processor_agent.py
-├── DASH/           
+├── DASH/         
 │   └── app.py
-├── data/              
-├── models/            
+├── data/            
+├── models/          
 ├── requirements.txt   
-├── README.md          
-└── .env               
+├── README.md        
+└── .env             
 ```
 
 ## Example Workflow
@@ -64,8 +64,8 @@ AI4AIR/
 
 ## Sample Use Case
 
-- City: Berlin  
-- Goal: Predict PM2.5 levels for the next 24 hours  
+- City: Berlin
+- Goal: Predict PM2.5 levels for the next 24 hours
 - Outcome: Real-time dashboard shows air quality trends, alerts high-risk periods, and helps citizens plan activities.
 
 ## Future Extensions
@@ -82,7 +82,7 @@ This project is licensed under the MIT License. See the `LICENSE` file for detai
 
 ## Contributing
 
-Contributions, bug reports, and feature suggestions are welcome.  
+Contributions, bug reports, and feature suggestions are welcome.
 Please open an issue or submit a pull request.
 
 ## Contact
@@ -90,4 +90,3 @@ Please open an issue or submit a pull request.
 For questions, feedback, or collaboration requests:
 
 - GitHub: [Poojashrees3](https://github.com/Poojashrees3), [PrajwalUnaik](https://github.com/PrajwalUnaik), [Ash-git-create](https://github.com/Ash-git-create)
-
