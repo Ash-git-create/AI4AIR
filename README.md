@@ -9,7 +9,7 @@ Welcome to **AI4AIR**, an intelligent AI agent-based system designed to collect,
 
 ## Project Overview
 
-<img src="./Arc_Diag.svg" alt="AI4AIR Architecture" width="75%" />
+<img src="Image/Arc_Diag.svg" alt="AI4AIR Architecture" width="75%" />
 
 **AI4AIR** is composed of four autonomous agents working in harmony:
 
