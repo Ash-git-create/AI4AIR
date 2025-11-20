@@ -40,20 +40,24 @@ Welcome to **AI4AIR**, an intelligent **AI agent**-based system designed to coll
 ```
 AI4AIR/
 │
-├── NEXUS/     
-│   └── main_agent.py
-├── HOMOGEN/         
-│   └── harmonizer.py
-├── AIRCAST/       
-│   └── processing_agent.py
-├── DASH/         
-│   └── visualization_agent.py
-├── data/            
-├── frontend/
-    └── app.py   
-├── requirements.txt   
-├── README.md        
-└── .env             
+├── agents/
+│   ├── NEXUS/
+│   │   └── main_agent.py
+│   ├── HOMOGEN/
+│   │   └── harmonizer.py
+│   ├── AIRCAST/
+│   │   └── processing_agent.py
+│   ├── DASH/
+│   │   └── visualization_agent.py
+│   └── requirements.txt
+│
+├── dashboard/
+│   └── app.py
+│   └── requirements.txt
+├── data/
+├── README.md
+└── .env
+          
 ```
 
 ## Example Workflow
