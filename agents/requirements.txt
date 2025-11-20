@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+requests
+cdsapi
+xarray
+pandas
+python-dotenv
+openai
+mysql-connector-python
+SQLAlchemy
+numpy
+python-dateutil
+pydantic
