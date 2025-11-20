@@ -41,15 +41,16 @@ Welcome to **AI4AIR**, an intelligent **AI agent**-based system designed to coll
 AI4AIR/
 │
 ├── NEXUS/     
-│   └── orchestrator_agent.py
+│   └── main_agent.py
 ├── HOMOGEN/         
-│   └── homogen_agent.py
+│   └── harmonizer.py
 ├── AIRCAST/       
-│   └── processor_agent.py
+│   └── processing_agent.py
 ├── DASH/         
-│   └── app.py
+│   └── visualization_agent.py
 ├── data/            
-├── models/          
+├── frontend/
+    └── app.py   
 ├── requirements.txt   
 ├── README.md        
 └── .env             
