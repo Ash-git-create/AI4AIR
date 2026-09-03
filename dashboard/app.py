@@ -1,3 +1,4 @@
+import os
 import streamlit as st
 import requests
 import time
@@ -10,7 +11,7 @@ import plotly.express as px
 # ---------------------------------------------------
 # CONFIG
 # ---------------------------------------------------
-BACKEND_URL = "http://100.125.192.36:5001"
+BACKEND_URL = os.getenv("BACKEND_URL", "http://localhost:5001")
 VIS_PATH = Path("/home/ai4air/proccesing/visualization_output.json")
 PROC_PATH = Path("/home/ai4air/proccesing/processing_results.json")
 

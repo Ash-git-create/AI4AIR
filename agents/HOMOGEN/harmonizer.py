@@ -51,7 +51,7 @@ if not OPENAI_API_KEY:
 # ======================================================================
 DB_DRIVER = "mysql+pymysql"
 DB_USER = "******"
-DB_PASSWORD = "******"  # Your password
+DB_PASSWORD = os.getenv("DB_PASSWORD")
 DB_HOST = "******"
 DB_PORT = 3306
 DB_NAME = "air_quality_db"

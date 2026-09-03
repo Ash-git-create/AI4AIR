@@ -3,15 +3,14 @@
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python)
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
 ![Platform](https://img.shields.io/badge/Platform-Multi--Agent--System-lightgrey)
-![Status](https://img.shields.io/badge/Status-Development-orange)
 
-Welcome to **AI4AIR**, an intelligent **AI agent**-based system designed to collect, process, and visualize air quality data for specific regions. This project combines real-time environmental data with machine learning models to forecast future air quality and empower citizens and policymakers with actionable insights.
+**AI4AIR** collects, processes and visualises air quality data for a chosen region, and uses an LLM to forecast pollutant levels from recent observations.
+
+> **Team project**, built by three contributors for a university module. Commits were made from shared machines, so git authorship does not track who wrote what.
 
 ## Project Overview
 
-<img src="Image/Arc_Diag.svg" alt="AI4AIR Architecture" width="75%" />
-
-**AI4AIR** is composed of four autonomous agents working in harmony:
+AI4AIR is composed of four agents:
 
 | Agent                      | Role                                                                                                 |
 | -------------------------- | ---------------------------------------------------------------------------------------------------- |
@@ -27,13 +26,16 @@ Welcome to **AI4AIR**, an intelligent **AI agent**-based system designed to coll
 - Provide accessible and interactive visual dashboards for public and institutional use
 - Support modular agent-based development for future scalability
 
-## Tech Stack (yet to be finalised)
+## Tech Stack
 
 - Language: Python 3.10+
-- Machine Learning Frameworks: scikit-learn, XGBoost, LSTM (Keras/TensorFlow)
-- Visualization: Streamlit, Dash, Plotly
-- Data Ingestion: Requests, Pandas, APIs (UBA, OpenAQ, DWD)
-- Storage: PostgreSQL
+- Forecasting: OpenAI API (gpt-4o-mini), prompted over recent observations
+- Visualization: Streamlit, Plotly
+- Data ingestion: Requests, Pandas, Sensor.Community API, Copernicus CAMS via `cdsapi`
+- Storage: MySQL via SQLAlchemy
+- Service layer: FastAPI
+
+Statistical and deep-learning forecasters (scikit-learn, XGBoost, LSTM) were scoped but not implemented. Forecasting is LLM-prompted.
 
 ## Project Structure
 
@@ -56,14 +58,14 @@ AI4AIR/
 │   └── requirements.txt
 ├── data/
 ├── README.md
-└── .env
+└── .env.example
           
 ```
 
 ## Example Workflow
 
 0. NEXUS initializes the pipeline, schedules agent tasks, and manages communication between HOMOGEN, PROCESSOR, and VISIOS.
-1. HOMOGEN connects to APIs (e.g., UBA, OpenWeather), fetches recent air quality and weather data, and stores harmonized output in a structured format.
+1. HOMOGEN connects to the Sensor.Community and Copernicus CAMS APIs, fetches recent air quality and weather data, and stores harmonised output in MySQL.
 2. AIRCAST loads this harmonized data, applies trained machine learning models, and forecasts future pollutant levels and AQI.
 3. DASH reads both current and predicted data, and displays it via a modern dashboard for user interaction.
 
@@ -73,17 +75,15 @@ AI4AIR/
 - Goal: Predict PM2.5 levels for the next 24 hours
 - Outcome: Real-time dashboard shows air quality trends, alerts high-risk periods, and helps citizens plan activities.
 
-## Future Extensions
+## Known limitations
 
-- Add more agents (e.g., DETEKTA, EXPLAINA)
-- Integrate satellite data calibration (Sentinel-5P via CALIBRO)
-- Implement feedback loops from users (FEEDBACKO)
-- Real-time alert system via SMS/Email (REACTOR)
-- Enhance ORCHESTRATOR with intelligent scheduling and adaptive coordination
+- The forecast is produced by prompting gpt-4o-mini. There is no trained model and no accuracy evaluation.
+- `dashboard/app.py` reads a hardcoded backend host. Set `BACKEND_URL` before running it elsewhere.
+- Throughput has not been measured.
 
 ## License
 
-This project is licensed under the MIT License. See the `LICENSE` file for details.
+MIT. See [`LICENSE`](LICENSE).
 
 ## Contributing
 
